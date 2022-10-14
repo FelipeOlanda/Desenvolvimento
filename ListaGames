@@ -10,45 +10,34 @@
     <title>Jogos Antigos</title>
 </head>
 <body>
-
-    <!--<iframe src='' frameborder='0' allowfullscreen></iframe>-->
-
-    <div id="game">
-        
-    </div>
-
+    <div id="game"></div> <!-- O iframe entra aki -->>
     <form>
         <label for="color">Favorite color?</label><br>
-        <button onclick="selecttion()">Botão</button>
+        <!-- <button onclick="selecttion()">Botão</button> Deu ruim (Reinicia a pagina) -->
+        <input type="button" onclick="selecttion()"></imput> <!-- Deu bom (Não reinicia a pagina) -->>
         <select id="colors">
-            <option value="select">-Select-</option>
+            <option>-Escolha um jogo-</option> <!-- alterando as opções teste para as opções -->>
             <option value="red">Red</option>
             <option value="gray">Gray</option>
-            <!--<option value="blue">Blue</option>
+            <option value="blue">Blue</option>
             <option value="black">Black</option>
             <option value="white">White</option>
             <option value="green">Green</option>
             <option value="yellow">Yellow</option>
             <option value="orange">Orange</option>
-            <option value="purple">Purple</option>-->
+            <option value="purple">Purple</option>
         </select>
     </form>
-
     <script>
         function selecttion(){
             let colors = document.getElementById("colors").value;
             let game = document.getElementById("game");
-            
-            //console.log(colors);
-            
             if (colors == "red"){
                 game.innerHTML = `<iframe src='https://www.minijogos.com.br/embed/super-bomberman-4' frameborder='0' allowfullscreen></iframe>`
-            
             };
             if (colors == "gray"){
                 game.innerHTML = "<iframe src='https://www.minijogos.com.br/embed/bomberman-fantasy-race' frameborder='0' allowfullscreen></iframe>"
             };
-            /*
             if (colors == "blue"){
                 alert(colors)
             };
@@ -70,17 +59,15 @@
             if (colors == "purple"){
                 alert(colors)
             };
-            */
         }
     </script>
-
     <style>
         body {
             background-color: black;
         }
-        button {
+        input {
             background-color: brown;
-            color: aliceblue;
+            border-color: aliceblue;
         }
         select {
             background-color: brown;
