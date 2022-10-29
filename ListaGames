@@ -5,61 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="16x16"  href="./Imagens/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
-    <title>Jogos Antigos</title>
+    <title>Jogos</title>
 </head>
 <body>
-    <div id="game"></div> <!-- O iframe entra aki -->>
     <form>
-        <label for="color">Favorite color?</label><br>
-        <!-- <button onclick="selecttion()">Botão</button> Deu ruim (Reinicia a pagina) -->
-        <input type="button" onclick="selecttion()"></imput> <!-- Deu bom (Não reinicia a pagina) -->>
-        <select id="colors">
-            <option>-Escolha um jogo-</option> <!-- alterando as opções teste para as opções -->>
-            <option value="red">Red</option>
-            <option value="gray">Gray</option>
-            <option value="blue">Blue</option>
-            <option value="black">Black</option>
-            <option value="white">White</option>
-            <option value="green">Green</option>
-            <option value="yellow">Yellow</option>
-            <option value="orange">Orange</option>
-            <option value="purple">Purple</option>
+        <label for="listaJogos">Escolha um jogo</label><br>
+        <input type="button" onclick="selecttion()"></imput>
+        <select id="listaJogos">
+            <option>--Escolha--</option>
+            <option>-Arcade-</option>
+            <option>super bomberman 4</option>
+            <option>bomberman fantasy race</option>
+            <option>tomba 2</option>
+            <option>Looney Tunes Sheep Raider</option>
+            <option>Crash Bash</option>
+            <option>Crash Bandicoot 3 Warped</option>
         </select>
     </form>
+    <div id="games"></div>
     <script>
         function selecttion(){
-            let colors = document.getElementById("colors").value;
-            let game = document.getElementById("game");
-            if (colors == "red"){
-                game.innerHTML = `<iframe src='https://www.minijogos.com.br/embed/super-bomberman-4' frameborder='0' allowfullscreen></iframe>`
+            let listaJogos = document.getElementById("listaJogos").value;
+            let game = document.getElementById("games");
+            if (listaJogos == "super bomberman 4"){
+                game.innerHTML = '<iframe src="https://www.retrogames.cc/embed/19846-super-bomberman-4-english-translated.html" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>'
             };
-            if (colors == "gray"){
-                game.innerHTML = "<iframe src='https://www.minijogos.com.br/embed/bomberman-fantasy-race' frameborder='0' allowfullscreen></iframe>"
+            if (listaJogos == "bomberman fantasy race"){
+                game.innerHTML = '<iframe src="https://www.retrogames.cc/embed/40237-bomberman-fantasy-race.html" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>'
             };
-            if (colors == "blue"){
-                alert(colors)
+            if (listaJogos == "tomba 2"){
+                game.innerHTML = '<iframe src="https://www.retrogames.cc/embed/41656-tomba-2.html" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>'
             };
-            if (colors == "black"){
-                alert(colors)
+            if (listaJogos == "Looney Tunes Sheep Raider"){
+                game.innerHTML = '<iframe src="https://www.retrogames.cc/embed/42549-looney-tunes-sheep-raider.html" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>'
             };
-            if (colors == "white"){
-                alert(colors)
+            if (listaJogos == "Crash Bash"){
+                game.innerHTML = '<iframe src="https://www.retrogames.cc/embed/40085-crash-bash.html" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>'
             };
-            if (colors == "green"){
-                alert(colors)
+            if (listaJogos == "Crash Bandicoot 3 Warped"){
+                game.innerHTML = '<iframe src="https://www.retrogames.cc/embed/40136-crash-bandicoot-warped.html" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>'
             };
-            if (colors == "yellow"){
-                alert(colors)
+            if (listaJogos == "jogo7"){
+                game.innerHTML = '<iframe src="" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>'
             };
-            if (colors == "orange"){
-                alert(colors)
+            if (listaJogos == "jogo8"){
+                game.innerHTML = '<iframe src="" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>'
             };
-            if (colors == "purple"){
-                alert(colors)
-            };
-        }
+            
+        };
     </script>
     <style>
         body {
@@ -68,6 +61,9 @@
         input {
             background-color: brown;
             border-color: aliceblue;
+        }
+        label {
+            color: aliceblue;
         }
         select {
             background-color: brown;
