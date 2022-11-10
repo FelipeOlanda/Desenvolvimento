@@ -20,6 +20,7 @@
             <option>Looney Tunes Sheep Raider</option>
             <option>Crash Bash</option>
             <option>Crash Bandicoot 3 Warped</option>
+            <option>Megaman X8</option>
         </select>
     </form>
     <div id="games"></div>
@@ -45,8 +46,8 @@
             if (listaJogos == "Crash Bandicoot 3 Warped"){
                 game.innerHTML = '<iframe src="https://www.retrogames.cc/embed/40136-crash-bandicoot-warped.html" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>'
             };
-            if (listaJogos == "jogo7"){
-                game.innerHTML = '<iframe src="" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>'
+            if (listaJogos == "Megaman X8"){
+                game.innerHTML = '<iframe src="https://www.retrogames.cc/embed/16692-megaman-vii-usa.html" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>'
             };
             if (listaJogos == "jogo8"){
                 game.innerHTML = '<iframe src="" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>'
